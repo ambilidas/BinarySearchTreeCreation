@@ -68,6 +68,30 @@ namespace BinarySearchTreeCreation
         {
             Console.WriteLine("Size = " + (1+ this.rightcount + this.leftcount));
         }
-       
+        public bool Search(T element, BinarySearchTree<T> node)
+        {
+            if (node == null)
+            {
+                return false;
+            }
+            if (node.nodeData.Equals(element))
+            {
+                Console.WriteLine("Element is present in BST");
+                result = true;
+            }
+            else
+            {
+                Console.WriteLine("Current element is {0}", node.nodeData);
+            }
+            if (element.CompareTo(node.nodeData) < 0)
+            {
+                Search(element, node.leftc);
+            }
+            if (element.CompareTo(node.nodeData) > 0)
+            {
+                Search(element, node.rightc);
+            }
+            return result;
+        }
     }
 }

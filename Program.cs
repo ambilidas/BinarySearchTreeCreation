@@ -25,7 +25,10 @@ namespace BinarySearchTreeCreation
             obj1.Add(67);
             obj1.Display();
             obj1.Size();
-             Console.ReadKey();
+            Console.WriteLine("Search for 63");
+            bool result = obj1.Search(63, obj1);
+            Console.WriteLine(result);
+            Console.ReadKey();
         }
     }
 }
