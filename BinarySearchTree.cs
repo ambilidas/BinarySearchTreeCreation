@@ -48,6 +48,7 @@ namespace BinarySearchTreeCreation
                 }
             }
         }
+        //method for displaying elements
         public void Display()
         {
             if (this.leftc != null)
@@ -62,5 +63,11 @@ namespace BinarySearchTreeCreation
                 this.rightc.Display();
             }
         }
+        //method to get the size
+        public void Size()
+        {
+            Console.WriteLine("Size = " + (1+ this.rightcount + this.leftcount));
+        }
+       
     }
 }
